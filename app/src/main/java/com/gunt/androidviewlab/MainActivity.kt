@@ -15,5 +15,9 @@ class MainActivity : AppCompatActivity() {
         binding.btnJoystick.setOnClickListener {
             startActivity(Intent(this, JoyStickActivity::class.java))
         }
+
+        binding.btnMotion.setOnClickListener {
+            startActivity(Intent(this, MotionMoveActivity::class.java))
+        }
     }
 }
