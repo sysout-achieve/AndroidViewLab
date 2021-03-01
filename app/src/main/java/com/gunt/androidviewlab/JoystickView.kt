@@ -12,37 +12,32 @@ class JoystickView(context: Context?, attrs: AttributeSet?) : View(context, attr
     private val innerPaint by lazy { Paint() }
     private val outterPaint by lazy { Paint() }
 
-    var positionX = 100f
-    var positionY = 100f
+    var positionX = 300f
+    var positionY = 300f
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         outterPaint.color = Color.BLACK
         outterPaint.style = Paint.Style.STROKE
-        canvas?.drawCircle(100f, 100f, 100F, outterPaint)
+        canvas?.drawCircle(300f, 300f, 300f, outterPaint)
 
 
         innerPaint.color = Color.RED
-        canvas?.drawCircle(positionX, positionY, 50F, innerPaint)
+        canvas?.drawCircle(positionX, positionY, 80F, innerPaint)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
-            MotionEvent.ACTION_DOWN -> {
+            MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
                 positionX = event.x
                 positionY = event.y
-                invalidate()
-            }
-            MotionEvent.ACTION_MOVE -> {
-
             }
             MotionEvent.ACTION_UP -> {
-
-            }
-            else ->{
-
+                positionX = 300f
+                positionY = 300f
             }
         }
+        invalidate()
 
         return true
     }
