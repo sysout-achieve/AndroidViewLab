@@ -7,6 +7,7 @@
     tools:context=".MotionMoveActivity">
 
     <com.gunt.androidviewlab.view.MotionJustMove
+        android:id="@+id/motion_view_justmove"
         android:layout_width="0dp"
         android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,4 +16,16 @@
         >
 
     </com.gunt.androidviewlab.view.MotionJustMove>
+
+    <com.gunt.androidviewlab.view.MotionCenterMove
+
+        android:id="@+id/motion_view_center"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motion_view_justmove"
+        >
+    </com.gunt.androidviewlab.view.MotionCenterMove>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
