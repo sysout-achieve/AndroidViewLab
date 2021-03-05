@@ -12,20 +12,24 @@
         android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.gunt.androidviewlab.view.MotionJustMove>
 
     <com.gunt.androidviewlab.view.MotionCenterMove
-
         android:id="@+id/motion_view_center"
         android:layout_width="0dp"
         android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/motion_view_justmove"
-        >
-    </com.gunt.androidviewlab.view.MotionCenterMove>
+        app:layout_constraintTop_toBottomOf="@+id/motion_view_justmove"/>
+
+    <com.gunt.androidviewlab.view.MotionSmaller
+        android:id="@+id/motion_smaller"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motion_view_center" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
